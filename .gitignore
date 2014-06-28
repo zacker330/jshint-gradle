@@ -1,0 +1,12 @@
+.DS_Store
+.*.swp
+
+*.ipr
+*.iml
+*.iws
+.idea
+out
+run
+build
+.gradle
+
