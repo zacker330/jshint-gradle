@@ -1,0 +1,23 @@
+apply plugin: 'groovy'
+apply plugin: 'maven'
+
+version = 1.0
+group = 'com.zjzhai'
+archivesBaseName = 'jshint-gradle'
+repositories.mavenCentral()
+
+
+
+dependencies {
+    groovy localGroovy()
+    compile(
+            "org.mozilla:rhino:1.7R4",
+            gradleApi()
+    )
+}
+
+uploadArchives {
+    repositories.mavenDeployer {
+        repository(url: 'file:/Users/zjzhai/.m2/repository')
+    }
+}
